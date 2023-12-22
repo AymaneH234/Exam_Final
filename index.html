@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="recuperer.js" defer></script>
+    <script src="afficher.js" defer></script>
+</head>
+<body>
+
+<!-- navbar en haut de la page  -->
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container" style="margin-right: 1000px">
+        <a class="navbar-brand" href="#">Répertoire de recettes communautaires</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+<br>
+<br>
+<br>
+
+
+
+    <!-- formulaire  pour créer une recette -->
+<div class="container form-row col-8 ">
+    <div class="container col-7">
+        <form class="form">
+        <h2>Ajouter une recette</h2>
+        <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" class="form-control" id="nom" minlength=5 placeholder="Entrer le nom de la recette"><span id="nom_validation"></span>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Ingrediant1">Ingrédiants</label>
+                <input type="text" class="form-control" id="Ingrediant1" placeholder="Ingrédiant 1" minlength="3" required><span id="Ingrediant1_validation"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="quantite1">quantité</label>
+                <input type="number" class="form-control" id="quantite1" placeholder="Quantité 1" min="0" required><span id="quantite1_validation"></span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="Ingrediant2">Ingrédiants</label>
+                <input type="text" class="form-control" id="Ingrediant2" placeholder="Ingrédiant 2" minlength="3" ><span id="Ingrediant2_validation"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="quantite2">quantité</label>
+                <input type="number" class="form-control" id="quantite2" placeholder="Quantité 2"  min="0" required><span id="quantite2_validation"></span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="Ingrediant3">Ingrédiants</label>
+                <input type="text" class="form-control" id="Ingrediant3" placeholder="Ingrédiant 3" minlength="3" ><span id="Ingrediant3_validation"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="quantite3">quantité</label>
+                <input type="number" class="form-control" id="quantite3" placeholder="Quantité 3"  min="0" ><span id="quantite3_validation"></span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="Ingrediant4">Ingrédiants</label>
+                <input type="text" class="form-control" id="Ingrediant4" placeholder="Ingrédiant 4" minlength="3" ><span id="Ingrediant4_validation"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="quantite4">quantité</label>
+                <input type="number" class="form-control" id="quantite4" placeholder="Quantité 4"  min="0" ><span id="quantite4_validation"></span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="Ingrediant5">Ingrédiants</label>
+                <input type="text" class="form-control" id="Ingrediant5" placeholder="Ingrédiant 5" minlength="3" ><span id="Ingrediant5_validation"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="quantite5">quantité</label>
+                <input type="number" class="form-control" id="quantite5" placeholder="Quantité 5"  min="0" ><span id="quantite5_validation"></span>
+            </div>
+
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px;width: 625px"></textarea>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary" style="margin-top: 25px">Ajouter la recette</button>
+
+    </div>
+</form>
+
+
+</div>
+    <!-- L'endroit pour afficher les recettes -->
+
+    <div class="form-group col" id="Ajouter_Recette" style="margin-left: 15px;margin-top: 35px">
+        <h2>Recettes</h2>
+
+
+        <div class="card w75 " >
+            <div class="card-body">
+                <h5 class="card-title">Nom de la recette 1 (test)</h5>
+                <p class="card-text">Ingrédiants: </p>
+                <ul>
+                    <li><span id="Afficher_quantite">1</span> Ingrédiant A <span id="Ingrediant_afficher A"></span></li>
+
+                </ul>
+
+
+
+
+                <p class="card-text">Ingrédiants: Étapes de préparations... </p>
+                <a href="#" class="btn btn-danger" style="float: right">Supprimer</a>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
